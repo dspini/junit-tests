@@ -9,32 +9,32 @@ public class StudentTest {
     Student spini;
 
     @Before
-    public void init(){
+    public void init() {
         don = new Student(1L, "Don");
         spini = new Student(2L, "Spini");
 
     }
 
     @Test
-    public void testIfIdWorks(){
+    public void testIfIdWorks() {
         assertEquals(1L, don.getId());
         assertEquals(2L, spini.getId());
     }
 
     @Test
-    public void testIfNameWorks(){
+    public void testIfNameWorks() {
         assertEquals("Don", don.getName());
         assertEquals("Spini", spini.getName());
         assertNotEquals("Don", spini.getName());
     }
 
     @Test
-    public void testIfGradesWorks(){
+    public void testIfGradesWorks() {
         assertEquals(0, don.getGrades().size());
     }
 
     @Test
-    public void testIfAddGradeWorks(){
+    public void testIfAddGradeWorks() {
         don.addGrade(80);
         assertTrue(80 == don.getGrades().get(0));
         don.addGrade(100);
@@ -42,7 +42,7 @@ public class StudentTest {
     }
 
     @Test
-    public void testIfAvgWorks(){
+    public void testIfAvgWorks() {
         assertEquals(0, don.getAverage(), 0);
         don.addGrade(100);
         don.addGrade(50);

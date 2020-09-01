@@ -31,7 +31,7 @@ public class Student {
         return this.name; // returns the student's name
     }
 
-    public ArrayList<Integer> getGrades(){
+    public ArrayList<Integer> getGrades() {
         return this.grades; // adds the given grade to the grades list
     }
 
@@ -41,12 +41,12 @@ public class Student {
 
     public double getAverage() {
 
-        if(this.grades.size() == 0){
+        if (this.grades.size() == 0) {
             return 0;
         }
 
         double sum = 0;
-        for (int grade: this.grades) {
+        for (int grade : this.grades) {
             sum += grade;
         }
         return sum / this.grades.size();
