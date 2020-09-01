@@ -10,7 +10,7 @@ public class CohortTest {
     Cohort cohortWithMany;
 
     @Before
-    public void setup(){
+    public void setup() {
         emptyCohort = new Cohort();
         cohortWithOne = new Cohort();
         cohortWithMany = new Cohort();
@@ -28,18 +28,18 @@ public class CohortTest {
         cohortWithMany.addStudent(trant);
     }
 
-//  A Cohort instance can add a Student to the List of students.
+    //  A Cohort instance can add a Student to the List of students.
     @Test
-    public void testAddStudentWorks(){
+    public void testAddStudentWorks() {
         cohortWithMany.addStudent(new Student(3, "Don Spini"));
         assertEquals("Don Spini", cohortWithMany.getStudents().get(2).getName());
         cohortWithMany.addStudent(new Student(4, "Donald Spini"));
         assertEquals(4, cohortWithMany.getStudents().size());
     }
 
-//  A Cohort instance can get the current List of students.
+    //  A Cohort instance can get the current List of students.
     @Test
-    public void testIfGetStudentsWork(){
+    public void testIfGetStudentsWork() {
         assertEquals(0, emptyCohort.getStudents().size());
         assertEquals(1, cohortWithOne.getStudents().size());
 
@@ -47,9 +47,9 @@ public class CohortTest {
         assertEquals(2, cohortWithMany.getStudents().get(1).getId());
     }
 
-//  A Cohort instance can get the average, and it's being calculated correctly.
+    //  A Cohort instance can get the average, and it's being calculated correctly.
     @Test
-    public void testIfAvgIsCorrect(){
+    public void testIfAvgIsCorrect() {
         assertEquals(Double.NaN, emptyCohort.getCohortAverage(), 0);
         assertEquals(90.0, cohortWithOne.getCohortAverage(), 0);
         assertEquals(95.0, cohortWithMany.getCohortAverage(), 0);
